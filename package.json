@@ -10,11 +10,11 @@
     "npm": ">=10"
   },
   "scripts": {
-    "start": "electron-forge start",
-    "start:performance": "node scripts/start-performance-recorder.mjs",
-    "start:otel:console": "node scripts/run-with-otel.mjs console -- npm start",
-    "start:otel:otlp": "node scripts/run-with-otel.mjs otlp -- npm start",
-    "start:otel:off": "node scripts/run-with-otel.mjs off -- npm start",
+    "start": "node init && electron-forge start",
+    "start:performance": "node init && node scripts/start-performance-recorder.mjs",
+    "start:otel:console": "node init && node scripts/run-with-otel.mjs console -- npm start",
+    "start:otel:otlp": "node init && node scripts/run-with-otel.mjs otlp -- npm start",
+    "start:otel:off": "node init && node scripts/run-with-otel.mjs off -- npm start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "updater:serve-feed": "node scripts/serve-local-update-feed.mjs",
